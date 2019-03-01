@@ -1,0 +1,133 @@
+/*
+ Calvin Lau
+ 10151228
+ B01
+ Assignment 2
+  styles.css
+*/
+* {
+    color: #4c4c4c;
+}
+
+body {
+    font: 13px Helvetica, Arial;
+    background: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+form {
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 20px;
+}
+
+form input {
+    border: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+h6 {
+    padding: 8px 8px 0;
+    margin: 0;
+    color: white;
+    border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+}
+
+.panel-wrapper {
+    padding: 5px 5px 0 5px;
+    height: 93vh;
+    width: 100%;
+}
+
+.form-wrapper {
+    padding: 0;
+}
+
+#messages-wrapper,
+#users-wrapper {
+    border: 4px solid;
+    border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    overflow-y: scroll;
+    padding: 0;
+    height: 97%;
+}
+
+#messages-wrapper {
+    position: relative;
+    border-color: #5bc0de;
+}
+
+#messages {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+    width: 100%;
+    padding: 0 5px 5px;
+    overflow-y: scroll;
+}
+
+#messages li {
+    padding: 3px 3px 5px;
+    font-size: 15px;
+    word-wrap: break-spaces;
+}
+
+#users-wrapper {
+    border-color: #5cb85c;
+}
+
+#users {
+    padding: 5px;
+}
+
+#users li {
+    padding: 2px;
+    font-size: 15px;
+}
+
+#inputBar {
+    border: 3px solid #007bff;
+}
+
+#username {
+    background: #5bc0de;
+}
+
+#connected-users-title {
+    background: #5cb85c;
+}
+
+.error-message {
+    font-weight: bold;
+    color: red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.green {
+    color: green;
+}

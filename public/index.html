@@ -1,0 +1,52 @@
+<!--
+ Calvin Lau
+ 10151228
+ B01
+ Assignment 3
+  index.html
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calvin's Chat Room</title>
+        <link rel="icon" type="image/x-icon" href="assets/chaticon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9 panel-wrapper">
+                    <h6 id="username"></h6>
+                    <div id="messages-wrapper">
+                        <ul id="messages"></ul>
+                    </div>
+                </div>
+                <div class="col-md-3 panel-wrapper">
+                    <h6 id="connected-users-title">Connected users:</h6>
+                    <div id="users-wrapper">
+                        <ul id="users"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-wrapper">
+                    <form action="">
+                        <div class="input-group">
+                            <input id="inputBar" class="form-control" type="text" autocomplete="off" placeholder="" aria-label="" aria-describedby="basic-addon1"/>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
