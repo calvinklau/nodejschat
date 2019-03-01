@@ -63,20 +63,28 @@ server.listen(3000, function() {
 
 // HELPERS
 function newConnection(socket) {
-    let newUser = null;
-    if (socket.handshake.headers.cookie !== undefined ) {
-        // If socket sends a cookie
-        newUser = new User('');
-        let cookies = socket.handshake.headers.cookie.split('; ');
-        for (let cookie of cookies) {
-            if (cookie.startsWith('username=')) {
-                newUser.username = cookie.split('=')[1];
-            } else if (cookie.startsWith('colour=')) {
-                newUser.colour = cookie.split('=')[1];
-            } else { }
+    let newUser = null,
+        socketCookie = socket.handshake.headers.cookie;
+    if (socketCookie !== undefined) {
+        if (socketCookie.indexOf('username=') === -1) {
+            // If handshake cookie does not include username, create new user
+            newUser = createUser();
+        } else {
+            newUser = new User('');
+            let cookies = socketCookie.split('; ');
+            for (let cookie of cookies) {
+                if (cookie.startsWith('username=')) {
+                    newUser.username = cookie.split('=')[1];
+                }
+
+                if (cookie.startsWith('colour=')) {
+                    newUser.colour = cookie.split('=')[1];
+                }
+            }
         }
     } else {
         // If socket doesn't send a cookie
+        console.log('CREATING A NEW USER');
         newUser = createUser();
     }
 

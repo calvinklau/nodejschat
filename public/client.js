@@ -224,7 +224,7 @@ $(function () {
     }
 
     function scrollBottom() {
-        let messages = document.getElementById('messages');
+        let messages = document.getElementById('messages-wrapper');
         messages.scrollTop = messages.scrollHeight;
     }
 });
